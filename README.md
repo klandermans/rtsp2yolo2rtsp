@@ -20,7 +20,7 @@ This open-source project enables real-time object detection using YOLOv8 on mult
 | `cam4`    | `rtsp://...`                                  |
 | `cam7`    | `rtsp://...`                                  |
 
-> You can customize the camera sources in the `CAMERA_URLS` dictionary in `main.py`.
+> You can customize the camera sources in the `CAMERA_URLS` dictionary in `app.py`.
 
 ## Requirements
 
