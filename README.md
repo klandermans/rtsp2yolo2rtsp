@@ -5,7 +5,7 @@ This demo was developed as part of the Next Level Animal Science knowledge-based
 ![image](https://github.com/user-attachments/assets/528af1a4-8e89-45ae-ad84-19a1795af8a0)
 
 
-This open-source project enables real-time object detection using YOLOv8 on multiple RTSP camera streams, overlays keypoints and IDs, and streams the combined output directly to YouTube in a 2x2 video grid.
+This example enables real-time object detection using YOLOv8 on multiple RTSP camera streams, overlays keypoints and IDs, and streams the combined output directly to YouTube in a 2x2 video grid.
 
 ## Features
 
