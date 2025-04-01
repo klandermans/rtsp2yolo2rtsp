@@ -100,16 +100,16 @@ def start_ffmpeg_stream():
     try:
         return subprocess.Popen(command, stdin=subprocess.PIPE, stderr=sys.stderr)
     except Exception as e:
-        print(f"❌ Failed to start FFmpeg: {e}")
+        print(f"Failed to start FFmpeg: {e}")
         return None
 
 def combine_and_stream():
     ffmpeg = start_ffmpeg_stream()
     if ffmpeg is None:
-        print("❌ Could not start FFmpeg. Check installation or stream key.")
+        print("Could not start FFmpeg. Check installation or stream key.")
         return
 
-    print("✅ Streaming started to YouTube in 1920x1080...")
+    print("Streaming started to YouTube in 1920x1080...")
 
     while True:
         with frame_lock:
@@ -131,13 +131,13 @@ def combine_and_stream():
         try:
             ffmpeg.stdin.write(grid.tobytes())
         except Exception as e:
-            print(f"❌ Error writing to FFmpeg: {e}")
+            print(f"Error writing to FFmpeg: {e}")
             break
 
         time.sleep(1 / 25)  # 25 FPS
 
 if __name__ == '__main__':
-    print("🚀 Starting camera threads...")
+    print("Starting camera threads...")
     for cam_id, url in CAMERA_URLS.items():
         threading.Thread(target=process_camera, args=(cam_id, url), daemon=True).start()
 
